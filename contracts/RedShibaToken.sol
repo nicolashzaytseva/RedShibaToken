@@ -930,7 +930,7 @@ contract RedShibaToken is BEP20 {
     /**
      * @notice Constructs the REDSHIBA Token contract.
      */
-    constructor() public BEP20("RRR", "RRR") {
+    constructor() public BEP20("Red Shiba Token", "RST") {
         _operator = _msgSender();
         _devAddress = _msgSender();
         _mint(_msgSender(), _maxSupply);
