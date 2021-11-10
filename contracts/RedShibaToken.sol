@@ -1104,6 +1104,11 @@ contract RedShibaToken is BEP20 {
         emit OperatorTransferred(_operator, newOperator);
         _operator = newOperator;
     }
+    
+    function setDevAddress(address newDev) public onlyOperator {
+        require(newDev != address(0), "REDSHIBA::setDevAddress: new devwallet is the zero address");
+        _devAddress = newDev;
+    }
 
     // Copied and modified from YAM code:
     // https://github.com/yam-finance/yam-protocol/blob/master/contracts/token/YAMGovernanceStorage.sol
